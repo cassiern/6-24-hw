@@ -200,22 +200,96 @@ const bondFilms = [
 ];
 
 //5.
-let bondTitles = [];
-for (let i =0; i < bondFilms.length; i++){
-bondTitles = [bondFilms[i].title];
-console.log(bondTitles);
-}
+// let bondTitles = [];
+// for (let i =0; i < bondFilms.length; i++){
+// 		bondTitles = [bondFilms[i].title];
+// 		console.log(bondTitles);
+// }
+
 
 //6. 
+// for (let i = 0; i <bondFilms.length; i++){
+// 	let oddBonds = [];
+// 	if(bondFilms[i].year % 2 !== 0){
+// 	oddBonds = [bondFilms[i].year];
+// 	console.log(oddBonds);
+// }
+// }console.log(oddBonds);
 
 
-for (let i = 0; i <bondFilms.length; i++){
-	let oddBonds = [];
-	if(bondFilms[i].year % 2 !== 0){
-	oddBonds = [bondFilms[i].year];
-	console.log(oddBonds);
+//7.
+// let allGrossNumber = 0;
+// let notNumbers = [];
+// let justNumbers = [];
+// let sum = 0;
+
+
+function strIsNum(str){
+	const num = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
+	for (let i = 0; i < num.length; i++){
+		if(str === num[i]){
+			return true;
+		} 
+	}
+	return false;
 }
-}console.log(oddBonds);
+
+function bondParser(str){
+	let grossNumber= "";
+	for(let i = 0; i <str.length; i++){
+		if(strIsNum(str[i])){
+			grossNumber += str[i];
+		}	
+	}	
+	grossNumber = parseInt(grossNumber);
+		return grossNumber;		
+}
+	
+let sum = 0;
+
+for(let i = 0; i < bondFilms.length; i++){
+	sum += bondParser(bondFilms[i].gross);
+}
+
+
+ console.log(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//pseudocode
+// create array variable to hold number string
+// loop through every object in bondFilm object
+// log every gross string
+// loop through individual string to push only numbers to an array
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
