@@ -199,24 +199,23 @@ const bondFilms = [
   "gross" : "$285,157,191" }
 ];
 
-// const bondTitles = () => {
-// 	for (i =0; i < bondFilms.length; i++){
-	
-// 		console.log(bondFilms[i].title);
-// };
-// }
-// bondTitles()
-
-
-bondTitles = [];
-for (i =0; i < bondFilms.length; i++){
+//5.
+let bondTitles = [];
+for (let i =0; i < bondFilms.length; i++){
 bondTitles = [bondFilms[i].title];
 console.log(bondTitles);
-
 }
 
+//6. 
 
 
+for (let i = 0; i <bondFilms.length; i++){
+	let oddBonds = [];
+	if(bondFilms[i].year % 2 !== 0){
+	oddBonds = [bondFilms[i].year];
+	console.log(oddBonds);
+}
+}console.log(oddBonds);
 
 
 
